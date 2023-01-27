@@ -1,11 +1,18 @@
 import React from 'react'
+import "./styles/WeatherCard.css"
 
-const WeatherCard = ({weather}) => {
+const WeatherCard = ({weather, temps, isCelsius, changeUnitTemp}) => {
   return (
-    <section>
-      <h2>{weather?.name}, {weather?.sys.country} </h2>
-      <ul>
-        <li>
+    <section className='weatherCard'>
+      <h1 className='weatherCard__title'>Weather App</h1>
+      <h2 className='weatherCard__place'>{weather?.name}, {weather?.sys.country} </h2>
+      <div className='weatherCard__img'>
+        <img src={`http://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="" />
+      </div>
+      <h3 className='weatherCard__temp'>{isCelsius ? temps?.celsius + "°C": temps?.fahrenheit + "°F"} &deg;</h3>
+      
+      <ul className='weatherCard__list'>
+        <li className='weatherCard__description'>
           {weather?.weather[0].main} , {weather?.weather[0].description}
           </li>
         <li>
@@ -15,9 +22,10 @@ const WeatherCard = ({weather}) => {
           <span>Clouds: {weather?.clouds.all} %</span>
         </li>
         <li>
-          <span>Preassure: {weather?.main.preassure} hPa</span>
+          <span>Preassure: {weather?.main.pressure} hPa</span>
         </li>
       </ul>
+      <button className='weatherCard__btn' onClick={changeUnitTemp}>&deg; C/ &deg; F</button>
     </section>
   )
 }
