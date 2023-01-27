@@ -4,7 +4,7 @@ import './App.css'
 import Loader from './components/Loader'
 import WeatherCard from './components/WeatherCard'
 
-const API_KEY = "a8b73ddc7f2942c5c6b1538dda0ff8f7"
+const API_KEY = ""
 
 function App() {
 
