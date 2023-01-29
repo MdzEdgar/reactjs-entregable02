@@ -4,7 +4,7 @@ import './App.css'
 import Loader from './components/Loader'
 import WeatherCard from './components/WeatherCard'
 
-const API_KEY = ""
+const API_KEY = "a8b73ddc7f2942c5c6b1538dda0ff8f7"
 
 function App() {
 
@@ -14,7 +14,6 @@ function App() {
   const [isCelsius, setIsCelsius] = useState(true)
 
   const success = (e) => {
-    console.log(e)
     const newCoords = {
       lat: e.coords.latitude,
       lon: e.coords.longitude

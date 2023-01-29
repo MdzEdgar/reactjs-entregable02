@@ -9,7 +9,10 @@ const WeatherCard = ({weather, temps, isCelsius, changeUnitTemp}) => {
       <div className='weatherCard__img'>
         <img src={`http://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="" />
       </div>
-      <h3 className='weatherCard__temp'>{isCelsius ? temps?.celsius + "°C": temps?.fahrenheit + "°F"} &deg;</h3>
+      <h3 className='weatherCard__temp'>{
+        isCelsius ? temps?.celsius + String.fromCharCode(176) + "C": temps?.fahrenheit + String.fromCharCode(176) + "F"
+        }
+      </h3>
       
       <ul className='weatherCard__list'>
         <li className='weatherCard__description'>
@@ -25,7 +28,7 @@ const WeatherCard = ({weather, temps, isCelsius, changeUnitTemp}) => {
           <span>Preassure: {weather?.main.pressure} hPa</span>
         </li>
       </ul>
-      <button className='weatherCard__btn' onClick={changeUnitTemp}>&deg; C/ &deg; F</button>
+      <button className='weatherCard__btn' onClick={changeUnitTemp}>&deg;C/ &deg;F</button>
     </section>
   )
 }
