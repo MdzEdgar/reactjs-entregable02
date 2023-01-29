@@ -4,7 +4,7 @@ import './App.css'
 import Loader from './components/Loader'
 import WeatherCard from './components/WeatherCard'
 
-const API_KEY = import.meta.env.VITE_API_KEY;
+const API_KEY = process.env.VITE_API_KEY;
 console.log(API_KEY)
 
 function App() {
