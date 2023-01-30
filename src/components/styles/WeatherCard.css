@@ -99,6 +99,12 @@
   margin: 15px 0;
 }
 
+.search-locations form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .search__results{
   padding: 10px 0;
 }
