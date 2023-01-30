@@ -1,0 +1,11 @@
+.search__results{
+  cursor: pointer;
+  display: none;
+}
+
+.hide--results{
+  display: none;
+}
+.show--results{
+  display: block;
+}

@@ -12,6 +12,7 @@ function App() {
   const [weather, setWeather] = useState()
   const [temps, setTemps] = useState()
   const [isCelsius, setIsCelsius] = useState(true)
+  const [nameCity, setNameCity] = useState()
 
   const success = (e) => {
     const newCoords = {
@@ -20,6 +21,21 @@ function App() {
     }
 
     setCoords(newCoords)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setNameCity(e.target.nameCity.value)
+    console.log("handleSubmit", e.target.nameCity.value)
+    //getCoords(nameCity)
+  }
+
+  const getCoords = async(nameCity) => {
+    console.log("getCoords", nameCity)
+    const end_point = `http://api.openweathermap.org/geo/1.0/direct?q=${nameCity}&limit=5&appid=${API_KEY}`
+    axios.get(end_point)
+      .then((response) => console.log(response.data))
+      .catch((err) => console.log(err))
   }
 
   const changeUnitTemp = () => setIsCelsius(!isCelsius)
@@ -47,17 +63,25 @@ function App() {
     })
     .catch(err => console.log(err))
     }
-  }, [coords])
+
+    if(nameCity) {
+      getCoords(nameCity);
+    }
+  }, [coords, nameCity])
   
   return (
     <div className="App">
       {
         weather ? (
+          <>
           <WeatherCard 
             weather={weather} 
             temps={temps} 
             isCelsius={isCelsius} 
-            changeUnitTemp={changeUnitTemp} />
+            changeUnitTemp={changeUnitTemp} 
+            API_KEY={API_KEY}
+            setCoords={setCoords}/>
+            </>
         ) : <Loader />
       }
     </div>
