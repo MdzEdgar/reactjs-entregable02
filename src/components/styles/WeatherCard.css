@@ -18,6 +18,11 @@
 .weatherCard__place{
   margin-bottom: 0;
   font-weight: 700;
+  margin: 0 auto;
+}
+
+.weatherCard__place i {
+  margin-right: 10px;
 }
 
 .weatherCard__img{
@@ -103,6 +108,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-width: 300px;
+}
+
+.search-locations button {
+  border: solid 1px #8c7cac;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #C0A2FC;
+  cursor: pointer;
+}
+
+.search-locations input {
+  min-width: 200px;
+  margin-left: 10px;
 }
 
 .search__results{

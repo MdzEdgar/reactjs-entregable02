@@ -4,12 +4,11 @@
 }
 
 .hide--results{
-  animation: slideaway 200ms;
   display: none;
 }
 
 .show--results{
-  animation: fadeInAnimation ease-in 3s;
+  animation: fadeInAnimation ease-in 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   display: block;
