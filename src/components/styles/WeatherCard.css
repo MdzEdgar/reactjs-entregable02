@@ -3,10 +3,10 @@
   padding: 20px;
   border-radius: 20px;
   text-align: center;
-  background-color: white;
-  color: black;
+  /*background-color: white;*/
+  color: #04112D;
   backdrop-filter: blur(5px);
-  background: rgba(255, 255, 255, 0.6);
+  background-color: rgba(161, 177, 253, 1);
 }
 
 .weatherCard__title {
@@ -30,7 +30,9 @@
 }
 
 .weatherCard__img i {
-  font-size: 140px;}
+  font-size: 140px;
+  color:#FCEDA2;
+}
 
 .weatherCard__temp {
   font-size: 30px;
@@ -40,6 +42,7 @@
 
 .weatherCard__temp i {
   margin-right: 10px;
+  color: #FCEDA2;
 }
 
 .weatherCard__list {
@@ -55,6 +58,7 @@
 .weatherCard__list li i {
   margin-right: 10px;
   font-size: 26px;
+  color:  #FCEDA2;
 }
 
 .weatherCard__list span {
@@ -64,7 +68,7 @@
 }
 
 .weatherCard__description{
-  color: rgb(49, 46, 3);
+  color: #090324;
   font-size: 20px;
   font-weight: 400;
   margin: 15px 0
@@ -77,12 +81,12 @@
 .weatherCard__btn {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  border: none;
+  border: solid 1px #8c7cac;
   padding: 10px 20px;
   font-size: 20px;
   border-radius: 10px;
-  background-color: coral;
-  color: white;
+  background-color: #C0A2FC;
+  /*color: white;*/
   cursor: pointer;
   transition: transform 300ms ease;
 }
@@ -91,3 +95,16 @@
   transform: scale(1.03);
 }
 
+.search-locations{
+  margin: 15px 0;
+}
+
+.search__results{
+  padding: 10px 0;
+}
+
+.search__results article{
+  display: flex;
+  justify-content: center;
+  border-bottom: dashed 1px black;
+}
