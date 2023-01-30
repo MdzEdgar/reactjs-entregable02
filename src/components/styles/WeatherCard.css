@@ -123,6 +123,11 @@
 .search-locations input {
   min-width: 200px;
   margin-left: 10px;
+  height: 35px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 5px;
+  
 }
 
 .search__results{
