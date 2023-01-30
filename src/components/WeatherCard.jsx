@@ -27,7 +27,7 @@ const WeatherCard = ({weather, temps, isCelsius, changeUnitTemp, API_KEY, setCoo
       
       <h2 className='weatherCard__place'>{weather?.name}, {weather?.sys.country} </h2>
       <div className='weatherCard__img'>
-        <img src={`http://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="" />
+        <img src={`https://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="" />
       </div>
       <h3 className='weatherCard__temp'>{
         isCelsius ? temps?.celsius + String.fromCharCode(176) + "C": temps?.fahrenheit + String.fromCharCode(176) + "F"
