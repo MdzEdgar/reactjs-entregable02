@@ -24,7 +24,7 @@ const handleSubmit = (e) => {
   return (
     <><form onSubmit={handleSubmit}>
           <label htmlFor="nameCity"></label>
-          <input id="nameCity" type="text" />
+          <input placeholder="Enter the city..." id="nameCity" type="text" />
           <button onClick={() => setIsHidden(false)}>Search</button>
         </form>
     <div className={`search__results ${isHidden ? "hide--results" : "show--results"} `}>

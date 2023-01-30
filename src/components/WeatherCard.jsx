@@ -9,7 +9,7 @@ const WeatherCard = ({weather, temps, isCelsius, changeUnitTemp, API_KEY, setCoo
   const [resultsCities, setResultsCities] = useState([])
 
   const getCoords = (nameCity) => {
-    const end_point = `http://api.openweathermap.org/geo/1.0/direct?q=${nameCity}&limit=5&appid=${API_KEY}`
+    const end_point = `https://api.openweathermap.org/geo/1.0/direct?q=${nameCity}&limit=5&appid=${API_KEY}`
     axios.get(end_point)
       .then((response) => setResultsCities(response.data))
       .catch((err) => console.log(err))
