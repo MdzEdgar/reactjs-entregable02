@@ -27,7 +27,6 @@ const WeatherCard = ({weather, temps, isCelsius, changeUnitTemp, API_KEY, setCoo
       
       <h2 className='weatherCard__place'><i className='bx bx-map' ></i>{weather?.name}, {weather?.sys.country} </h2>
       <div className='weatherCard__img'>
-        {/* <img src={`https://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="" /> */}
         <i className={`wi wi-owm-${weather?.weather[0].id}`}></i>
       </div>
       <h3 className='weatherCard__temp'>
