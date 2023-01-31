@@ -7,3 +7,23 @@
   padding: 20px;
   background-color: #403c3c;
 }
+
+.bg-forecast-Thunderstorm{
+  background-color: yellow;
+
+}
+
+.bg-forecast-Drizzle{
+
+}
+
+.bg-forecast-Rain{
+
+}
+.bg-forecast-Snow{}
+.bg-forecast-Mist, .bg-forecast-Smoke, .bg-forecast-Haze, .bg-forecast-Dust, .bg-forecast-Fog, .bg-forecast-Sand,
+.bg-forecast-Dust, .bg-forecast-Ash, .bg-forecast-Squall, .bg-forecast-Tornado {
+
+}
+.bg-forecast-Clear{}
+.bg-forecast-Clouds{}
