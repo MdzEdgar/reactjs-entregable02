@@ -8,22 +8,32 @@
   background-color: #403c3c;
 }
 
-.bg-forecast-Thunderstorm{
-  background-color: yellow;
-
+.bg-forecast {
+  background-position: center;
+  background-size: cover;
 }
 
-.bg-forecast-Drizzle{
-
+.bg-forecast.Thunderstorm{
+  background-image: url('./assets/Thunderstorm.jpg');
 }
 
-.bg-forecast-Rain{
-
+.bg-forecast.Drizzle{
+  background-image: url('./assets/Drizzle.jpg');
 }
-.bg-forecast-Snow{}
-.bg-forecast-Mist, .bg-forecast-Smoke, .bg-forecast-Haze, .bg-forecast-Dust, .bg-forecast-Fog, .bg-forecast-Sand,
-.bg-forecast-Dust, .bg-forecast-Ash, .bg-forecast-Squall, .bg-forecast-Tornado {
 
+.bg-forecast.Rain{
+  background-image: url('./assets/Rain.jpg');
 }
-.bg-forecast-Clear{}
-.bg-forecast-Clouds{}
+.bg-forecast.Snow{
+  background-image: url('./assets/Snow.jpg');
+}
+.bg-forecast.Mist, .bg-forecast.Smoke, .bg-forecast.Haze, .bg-forecast.Dust, .bg-forecast.Fog, .bg-forecast.Sand, .bg-forecast.Dust, .bg-forecast.Ash, .bg-forecast.Squall, .bg-forecast.Tornado
+{
+  background-image: url('./assets/Fog.jpg');
+}
+.bg-forecast.Clear{
+  background-image: url('./assets/Clear.jpg');
+}
+.bg-forecast.Clouds{
+  background-image: url('./assets/Clouds.jpg');
+}

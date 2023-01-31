@@ -55,7 +55,7 @@ function App() {
   }, [coords, nameCity])
   
   return (
-    <div className="App">
+    <div className={`App bg-forecast ${weather?.weather[0].main} `}>
       {
         weather ? (
           <>
